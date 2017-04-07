@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "DropBallView.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = BLACK_COLOR;
+    
+    DropBallView *dropView = [[DropBallView alloc]initWithFrame:CGRectMake(0, 0, 250*0.43, 250)];
+    dropView.center = self.view.center;
+    [self.view addSubview:dropView];
+    
 }
 
 
